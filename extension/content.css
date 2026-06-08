@@ -1,0 +1,23 @@
+/* The button itself is a clone of YouTube's; this only positions the host
+   and draws the progress ring. */
+#ytc-copy-btn {
+  display: inline-block;
+  vertical-align: top;
+}
+#ytc-copy-btn.ytc-busy button { cursor: progress; }
+#ytc-copy-btn.ytc-busy .ytSpecButtonShapeNextIcon { opacity: 0.5; }
+#ytc-copy-btn .ytc-progress {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  pointer-events: none;
+}
+#ytc-copy-btn .ytc-ring {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.3s ease, opacity 0.2s;
+}
